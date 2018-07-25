@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MasterTab!</title>
+        
+        <script src="/src/utils.js"></script>
+        <script src="/src/helpers.js"></script>
+        <script src="/src/storage.js"></script>
+        <script src="/src/handlers.js"></script>
+        <script src="/src/categories.js"></script>
+        <script src="/src/tabs.js"></script>
+        <script src="mastertab.js"></script>
+
+        <link rel="stylesheet" href="/src/stylesheets/mastertab.css"/>
+    </head>
+    <body>
+        <header id="main-title"><h1><a href="#">MasterTab!</a></h1></header>
+        <nav>
+        <div id="header-menu">
+            <ul>
+                <li>
+                    <input type="text" placeholder="Search for specific tabs" id="search-tab-input"></input>
+                </li>
+                <li id="select-all-tabs">
+                    <button>All tabs</button>
+                </li>
+                <li>
+                    <input type="text" placeholder="Add new category" id="new-category-input" maxlength="45"></input>
+                    <button id="new-category-btn">Add</button>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <div id="flash-msg"></div>
+        <div id="main-content">
+            <div id="all-tabs"></div>
+        </div>
+    </body>
+</html>

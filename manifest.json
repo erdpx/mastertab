@@ -1,0 +1,26 @@
+{
+    "name": "MasterTab!",
+    "version": "1.0",
+    "description": "Collapse all your tabs into one MasterTab!",
+
+    "background": {
+        "scripts": ["/src/background.js"],
+        "persistent": false
+    },
+    "icons": {
+        "16": "/img/mt16.png",
+        "48": "/img/mt48.png",
+        "128": "/img/mt128.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+
+    "web_accessible_resources": ["/src/mastertab.js"],
+
+    "browser_action": {},
+
+    "manifest_version": 2
+}
