@@ -13,13 +13,16 @@
         <script src="mastertab.js"></script>
 
         <link rel="stylesheet" href="/src/stylesheets/mastertab.css"/>
+        <link rel="stylesheet" href="/src/stylesheets/import-export.css"/>
         <link rel="stylesheet" href="/src/stylesheets/options.css"/>
 
+        <link rel="import" href="../import-export/import-export.html" id="import-export-link" async/>
         <link rel="import" href="../options/options.html" id="options-link" async/>
     </head>
     <body>
         <header id="main-title"><h1><a href="#">MasterTab!</a></h1></header>
         <div id="main-options">
+            <button id="master-tab-import-export">Import/Export!</button>
             <button id="master-tab-options">Options!</button>
         </div>
         <nav>

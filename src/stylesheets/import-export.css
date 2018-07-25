@@ -1,0 +1,19 @@
+#main-content textarea {
+    border: none;
+    padding: 2vh;
+    width: 60vh;
+    height: 60vh;
+    color: rgb(212, 207, 207);
+    margin: 5vh auto;
+    display: block;
+    background-color: #3481A8;
+    border-radius: 4px;
+}
+
+#main-content textarea::placeholder {
+    color: #fff;
+}
+
+#main-content textarea::-webkit-scrollbar {
+    display: none;
+}

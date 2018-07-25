@@ -49,5 +49,23 @@ const handle = {
         handleOptions() // options.js
 
         event.target.removeEventListener('click', handle.renderOptions);
+    },
+
+    importExport: function() {
+        let importExportBtn = document.getElementById('master-tab-import-export');
+        importExportBtn.addEventListener('click', this.renderImportExport);
+    },
+
+    renderImportExport: function(event) {
+
+        let importExportContent = document.getElementById('import-export-link').import;
+
+        helpers.removeAllSectionTabsFromDOM();
+
+        helpers.replaceHeaderMenuContent(importExportContent)
+
+        handleImportExport() // import-export.js
+        
+        event.target.removeEventListener('click', handle.renderImportExport)
     }
 }
