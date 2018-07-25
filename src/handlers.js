@@ -33,6 +33,21 @@ const handle = {
             tabsHandlers.createSectionOfTabs(tabsFound);
         })
         .catch(resultIsEmpty => {return});
+    },
+
+    options: function() {
+        let optionsBtn = document.getElementById('master-tab-options');
+        optionsBtn.addEventListener('click', this.renderOptions);
+    },
+
+    renderOptions: function(event) {
+
+        let optionsContent = document.getElementById('options-link').import;
+
+        helpers.replaceHeaderMenuContent(optionsContent);
+
+        handleOptions() // options.js
+
+        event.target.removeEventListener('click', handle.renderOptions);
     }
-    
 }

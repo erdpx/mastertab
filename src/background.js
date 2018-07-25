@@ -31,7 +31,7 @@ const saveAllTabsInStorage = () => {
                     tabsCounter++;
                 }
 
-                chrome.tabs.remove(tab.id);
+                // chrome.tabs.remove(tab.id);
             });
 
             // Push to allTabs array only if contain some tab

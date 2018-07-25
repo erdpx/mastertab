@@ -7,6 +7,8 @@
         handleAndInitializeTabs();
 
         handle.searchBox();
+
+        handle.options();
     
     });
 

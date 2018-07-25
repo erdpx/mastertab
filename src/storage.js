@@ -146,4 +146,29 @@ const storage = {
         .catch(resultIsEmpty => {return});
     },
 
+    changeCategoryName: (categoryId, categoryName) => {
+        if (!categoryId || !categoryName) return false
+    
+        storage.getObject('categories')
+        .then(result => {
+            result.categories[categoryId] = categoryName;
+    
+            storage.setObject({'categories': result.categories});
+        })
+        .catch(resultIsEmpty => {return});
+    },
+
+
+    deleteCategory: categoryId => {
+        if (!categoryId) return
+    
+        storage.getObject('categories')
+        .then(result => {
+            result.categories.splice(categoryId, 1);
+    
+            storage.setObject({'categories': result.categories});
+        })
+        .catch(resultIsEmpty => {return});
+    },
+
 }
