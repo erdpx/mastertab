@@ -33,26 +33,34 @@ a {
     color: var(--text-color);
 }
 
-#main-options button {
+#main-options button,
+#main-options a {
     position: absolute;
     border: none;
     cursor: pointer;
     outline: none;
     background: transparent;
     color: var(--text-color);
+    font-size: 1.2em;
 }
 
-#master-tab-options {
+#main-options #master-tab-options {
     top: 5px;
     right: 5px;
 }
 
-#master-tab-import-export {
+#main-options #master-tab-import-export {
     top: 5px;
     right: 60px;
 }
 
-#main-options button:hover {
+#main-options #github-link {
+    top: 5px;
+    right: 145px;
+}
+
+#main-options button:hover,
+#main-options a:hover {
     border-bottom: 1px solid #fff;
 }
 
