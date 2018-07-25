@@ -15,7 +15,8 @@
 
     "permissions": [
         "tabs",
-        "storage"
+        "storage",
+        "contextMenus"
     ],
 
     "web_accessible_resources": ["/src/mastertab.js"],

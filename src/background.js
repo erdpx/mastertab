@@ -31,7 +31,7 @@ const saveAllTabsInStorage = () => {
                     tabsCounter++;
                 }
 
-                // chrome.tabs.remove(tab.id);
+                chrome.tabs.remove(tab.id);
             });
 
             // Push to allTabs array only if contain some tab
@@ -44,3 +44,30 @@ const saveAllTabsInStorage = () => {
         });
     });
 }
+
+chrome.runtime.onInstalled.addListener(() => {
+
+    chrome.contextMenus.create({
+        "id": "displayMasterTab",
+        "title": "Open MasterTab!"
+    });
+    
+    chrome.contextMenus.create({
+        "id": "collapseMasterTab",
+        "title": "Collapse all tabs into MasterTab!"
+    });
+    
+});
+
+chrome.contextMenus.onClicked.addListener(contextMenu => {
+    if (contextMenu.menuItemId == 'displayMasterTab') {
+        chrome.tabs.query({currentWindow: true, title: 'MasterTab!'}, tabs => {
+            if (tabs[0] && tabs[0].index)
+                chrome.tabs.highlight({'tabs': tabs[0].index});
+            else
+                chrome.tabs.create({url: 'mastertab.html'});
+        });
+    }
+    if (contextMenu.menuItemId == 'collapseMasterTab')
+        saveAllTabsInStorage();
+});
